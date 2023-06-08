@@ -1,4 +1,5 @@
-import { AppShell, Burger, Footer, Header, MediaQuery, NavLink, Navbar, Text, useMantineTheme } from '@mantine/core';
+import { AppShell, Avatar, Burger, Footer, MediaQuery, NavLink, Navbar, Text, useMantineTheme } from '@mantine/core';
+import { Header } from '@myproject/ui';
 import { IconChessQueen, IconDatabaseImport, IconLayersSubtract, IconLogin } from '@tabler/icons-react';
 import { PropsWithChildren, useState } from 'react';
 
@@ -29,7 +30,6 @@ export function LayoutMantine({ children }: PropsWithChildren) {
           <NavLink label="Product" component="a" href="/products" icon={<IconLayersSubtract size="1rem" stroke={1.5} />} />
 
           <NavLink label="Data fetching" component="a" href="/star-wars" icon={<IconDatabaseImport size="1rem" stroke={1.5} />} />
-
         </Navbar>
       }
       footer={
@@ -38,8 +38,10 @@ export function LayoutMantine({ children }: PropsWithChildren) {
         </Footer>
       }
       header={
-        <Header height={{ base: 50, md: 70 }} p="md">
-          <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
+        <Header 
+          height={{ base: 50, md: 70 }} 
+          p="md"
+          slot1={(
             <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
               <Burger
                 opened={opened}
@@ -49,10 +51,14 @@ export function LayoutMantine({ children }: PropsWithChildren) {
                 mr="xl"
               />
             </MediaQuery>
-
+          )}
+          slot2={(
             <Text>Header domain</Text>
-          </div>
-        </Header>
+          )}
+          slot3={(
+            <Avatar src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=250&q=80" />
+          )}
+        />
       }
     >
       {children}

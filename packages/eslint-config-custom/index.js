@@ -32,7 +32,8 @@ module.exports = {
         "allowList": {
           "Dev": true,
           "dev": true,
-          "env": true
+          "env": true,
+          "Props": true
         },
         "ignore": [
           "\\.e2e$",
