@@ -17,6 +17,7 @@
 
 #### Packages
 - `ui`: shared ui components for `web` and `docs` apps
+- `ssr`: ssr module
 - `eslint-config-custom`: shared `eslint` configurations
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 - `vite`: vite config
