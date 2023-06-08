@@ -1,0 +1,24 @@
+{
+  "name": "@myproject/ui",
+  "version": "0.0.1",
+  "type": "module",
+  "module": "./index.ts",
+  "exports": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "lint:fix": "eslint --fix \"**/*.{js,ts,tsx}\""
+  },
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@mantine/core": "^6.0.13",
+    "@mantine/hooks": "^6.0.13"
+  }
+}

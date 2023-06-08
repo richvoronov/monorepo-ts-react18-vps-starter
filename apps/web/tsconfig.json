@@ -1,0 +1,21 @@
+{
+  "extends": "tsconfig/react.json",
+  "compilerOptions": {
+    "types": [
+      "vite/client"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "#root/*": ["./src/*"],
+      "#auth/*": ["src/auth/*"],
+      "#marketing/*": ["src/marketing/*"],
+      "#product/*": ["src/product/*"],
+      "#renderer/*": ["./src/renderer/*"],
+      "#starwars/*": ["src/starwars/*"],
+    }
+  },
+  "include": [
+    "src",
+    "server"
+  ]
+}
